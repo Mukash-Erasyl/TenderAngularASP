@@ -1,0 +1,333 @@
+.content {
+    margin: 0;
+    max-width: 100%;
+}
+
+
+.head {
+    
+    padding: 100px 50px;
+    height: 300px;
+    background-color: #F5F5F5;
+    text-align: center;
+    
+
+}
+
+.title {
+    margin-left: 25%;
+    max-width: 700px;
+
+    font-size: 22px;
+    font-weight: bold;
+    
+
+}
+
+.underTitle {
+    margin-left: 37%;
+    font-weight: 100;
+    max-width: 350px;
+    font-size: 14px;
+    opacity: .3;
+}
+
+.findField {
+    margin-left: 25%;
+    display: flex;
+}
+
+.findField input {
+    font-size: 17px;
+    padding: 5px 15px;
+    width: 700px;
+    height: 40px;
+}
+
+.fieldBtn {
+    height: 55px;
+    width: 50px;
+    border-radius: 3px 3px 3px 3px  ;
+    background-color:cornflowerblue;
+}
+
+
+.fieldBtn  img {
+    width: 30px;
+    padding: 30% 20%;
+    transition: .7s;
+}
+
+
+.fieldBtn:active {
+    background-color: aliceblue;
+
+}
+
+
+.findClue {
+    font-size: 17px;
+    margin-top: 20px;
+    max-width: 450px;
+    margin-left: 25%;
+}
+
+.findClue a {
+
+    text-decoration: none;
+    color:cadetblue;
+}
+
+
+.mainContent {
+    padding: 3% 25%;
+}
+
+.mainContent h1 {
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+
+.appTenderContent {
+    padding: 2%;
+    display: grid;
+
+    
+    grid-template-areas: 
+    "headerGrid headerGrid"
+    "addSortGrid addSortGrid"
+    "navGrid contentGrid";
+
+    grid-template-rows: auto;
+    grid-template-columns: 300px 300px;
+    grid-gap: 25px; 
+}
+
+.addSort {
+    grid-area: addSortGrid;
+
+}
+
+.tenderHeaderContent {
+    grid-area: headerGrid;
+    background-color: #F0F0F0;
+    border-radius: 10px 10px 10px 10px ;
+    
+
+}
+
+.tenderMainContent {
+    grid-area: navGrid;
+ 
+}
+
+.tenderContentCategories {
+    margin-top: 5px;
+    grid-area: contentGrid;
+    background-color: #F0F0F0;
+    border-radius: 10px 10px 10px 10px ;
+    max-height: 340px;
+}
+
+.choosTender {
+    display: flex;
+    padding: 12px;
+
+}
+.chooseTenderEl {
+    margin: auto 5px;
+}
+
+.chooseTenderAll {
+    color: blue;
+    margin-top: 13px;
+}
+
+.headerFilterField {
+    
+}
+
+.filterFinder {
+    display: flex;
+}
+
+.fieldFilterBtn {
+    height: 20px;
+    width: 20px;
+    border-radius: 3px 3px 3px 3px  ;
+    background-color:cornflowerblue;
+
+}
+
+.fieldFilterBtn img {
+    padding: 5px 3px;
+}
+
+.headerMainPart {
+    display: flex;
+}
+
+.hfEl {
+    margin: auto 10px;
+}
+
+.filterFooter {
+    margin: 10px auto;
+    display: flex;
+    font-size: 10px;
+}
+
+.filterFooterEl {
+    margin: auto 30px;
+
+}
+
+.tenderContentCategories {
+    padding: 10px;
+    
+}
+
+
+.categoryEl {
+    display: flex;
+    font-size: 15px;
+    margin: 20px 15px;
+    justify-content: space-between;
+    
+    
+}
+
+.categoryFlag input {
+    padding: 50%;
+}
+
+.tenderPostContent {
+    border-radius: 10px 10px 10px 10px ;
+    padding: 15px;
+    margin-bottom: 15px;
+
+    background-color: #F0F0F0;
+    
+}
+
+.tenderTitle {
+    display: flex;
+    justify-content: space-between;
+    color: #42AAFF;
+}
+
+.elective {
+    margin-top: 16px;
+}
+
+.startDate {
+    font-size: 11px;
+}
+
+.tenderPostDesc {
+    margin: 10px auto;
+    font-size: 12px;
+}
+
+.tenderPostDateEnd {
+    font-size: 11px;
+    margin-bottom: 10px;
+    color: #3F888F;
+}
+
+.location {
+    font-size: 11px;
+}
+
+.pageSwitchBtn {
+    
+
+}
+
+.pageSwitcher {
+    display: flex;
+    justify-content: space-between;
+}
+
+.switchEl {
+    background-color: #F5F5F5;
+    border-radius: 5px 5px 5px 5px ;
+    transition: .4s;
+    padding: 7px 12px ;
+}
+
+.switchEl:hover {
+    background-color: #1E90FF;
+    color: white;
+    
+
+}
+
+.pageSwitchArrow {
+    padding-top: 8px;
+}
+
+.choosePageBtnBC {
+    background-color: #1E90FF;
+}
+
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {display:none;}
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }

@@ -1,0 +1,307 @@
+.container {
+    margin: 50px;
+    
+}
+
+.postContent {
+    margin-left: 400px;
+}
+
+.headInfo {
+    
+    max-width: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -50px;
+}
+
+.headEl {
+    padding: 5px;
+    background-color: #F5F5F5;
+    min-width: 200px;
+    margin: 5px;
+    border-radius: 10px 10px 10px 10px ;
+}
+
+.postTitle {
+    max-width: 350px;
+}
+
+.postTitle {
+    margin-top: 50px;
+}
+
+.picCon img {
+    width: 350px;
+    border-radius: 10px 10px 10px 10px ;
+
+}
+
+.desk {
+    padding: 5px;
+    margin: 25px 0;
+    border-radius: 10px 10px 10px 10px ;
+    max-width: 350px;
+    background-color: #F5F5F5 ;
+}
+
+.deskText {
+    padding: 10px;
+}
+.geolockation {
+    padding: 5px;
+    margin: 25px 0;
+    border-radius: 10px 10px 10px 10px ;
+    max-width: 350px;
+    background-color: #F5F5F5 ;
+}
+
+.map {
+   
+}
+
+
+.deskTitle {
+    padding: 5px 12px;
+}
+
+.objectType {
+    padding: 2px;
+    max-width: 350px;
+    background-color: #F5F5F5 ;
+    padding:0 10px;
+    border-radius: 10px 10px 10px 10px ;
+
+}
+
+/* tr{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+} */
+
+th, td {
+    padding:5px 0;
+    padding-right: 150px;
+
+    margin: auto 450px;
+  }
+
+.objectEl {
+    display: flex;
+    
+    
+}
+
+.tdSecEl{
+    font-weight: bold;
+}
+
+.term {
+    margin-top: 25px;
+    padding: 2px;
+    max-width: 350px;
+    background-color: #F5F5F5 ;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px 10px 10px 10px ;
+
+}
+.termDates{
+    display: flex;
+}
+
+.termDateEl {
+    margin-right: 25px;
+    
+}
+
+.termDateTitle {
+    font-weight: 100;
+    font-size: 12px;
+    opacity: .4;
+}
+
+.termDateContent {
+    margin-top: 2px;
+    font-size: 17px;
+    opacity: .7;
+}
+
+.arrow {
+    margin-top: 10px;
+    color: blue;
+}
+
+.termDays {
+    margin-top: 5px;
+    color: rgb(242, 206, 0);
+    font-size: large;
+}
+
+.stockBlock {
+    padding: 0 10px;
+    margin-top: 25px;
+    max-width: 350px;
+    background-color: black ;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px 10px 10px 10px ;
+    height: 75px;
+    color: white;
+    padding-top: 30px;
+    font-weight: 300;
+    font-size: 18px;
+    font-family:'Times New Roman', Times, serif;
+
+}
+
+.downloadSpecific {
+    
+    margin-top: 25px;
+    max-width: 350px;
+    background-color: #007FFF ;
+    border-radius: 10px 10px 10px 10px ;
+    height: 45px;
+    color: white;
+    padding: 0 15px;
+    font-size: 17px;
+    padding-top: 20px;
+    font-weight: bold;
+
+}
+
+.dow {
+    display: flex;
+    margin-left: 15%;
+    
+}
+.downloadSpecificIcon {
+    margin-right: 10px;
+}
+
+.downloadSpecificIcon img {
+    width: 25px;
+}
+
+.offer {
+    margin-top: 25px;
+    max-width: 350px;
+    background-color: #3BB08F ;
+    border-radius: 10px 10px 10px 10px ;
+    height: 45px;
+    color: white;
+    padding: 0 10px;
+    font-size: 17px;
+    padding-top: 20px;
+    font-weight: bold;
+
+
+}
+
+.off {
+    margin-left: 25%;
+
+}
+
+.title {
+    display: flex;
+    margin-top: 50px;
+    
+}
+
+.titleBut {
+    display: flex;
+}
+
+
+.but {
+    margin-top: 35px;
+    margin-right: 25px;
+    
+
+}
+
+.but img {
+    width: 25px;
+    padding: 10px;
+    background-color:#F5F5F5;
+    border-radius: 50%;
+    transition: .6s;
+
+}
+
+.but img:hover {
+    background-color:beige;
+}
+
+.titleEl {
+    margin-left: 150px;
+}
+
+.titleText{ 
+    font-size: 21px;
+    font-weight: 800;
+}
+
+
+.tenderPostContents {
+    display: flex;
+    overflow: scroll;
+    margin-top: 50px;
+
+}
+.tenderPostContent {
+    border-radius: 10px 10px 10px 10px ;
+    padding: 15px;
+    margin-bottom: 15px;
+    max-width: 350px;
+    min-width: 350px;
+    margin-right: 25px;
+
+    background-color: #F0F0F0;
+    
+}
+
+.tenderTitle {
+    display: flex;
+    justify-content: space-between;
+    color: #42AAFF;
+}
+
+.elective {
+    margin-top: 16px;
+}
+
+.startDate {
+    font-size: 11px;
+}
+
+.tenderPostDesc {
+    margin: 10px auto;
+    font-size: 12px;
+    height: 75px;
+}
+
+.tenderPostDateEnd {
+    font-size: 11px;
+    margin-bottom: 10px;
+    color: #3F888F;
+}
+
+.location {
+    font-size: 11px;
+}
+
+.tenderPostDesc {
+    overflow: scroll;
+    
+}
+
+.desk {
+    overflow: scroll;
+    max-height: 250px;
+}
+

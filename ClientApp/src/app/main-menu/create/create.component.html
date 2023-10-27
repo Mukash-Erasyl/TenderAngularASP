@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="createContainer">
+        <div class="head">
+            <h1>Создайте тендер на закуп материала , инструмента , оборудования</h1>
+        </div>
+        <div class="createOptions">
+            <div class="findMaterial opt">
+                <div class="createOptIcon"><img src="https://img.icons8.com/?size=512&id=132&format=png" alt=""></div>
+                <div class="createOptText">Найдите материал</div>
+            </div>
+            <div class="addList opt">
+                <div class="createOptIcon"><img src="https://img.icons8.com/?size=512&id=95779&format=png" alt=""></div>
+                <div class="createOptText">Добавьте в список закупок</div>
+
+            </div>
+            <div class="term opt">
+                <div class="createOptIcon"><img src="https://img.icons8.com/?size=512&id=37877&format=png" alt=""></div>
+                <div class="createOptText">Укажите срок поставки</div>
+
+            </div>
+            <div class="postTender opt">
+                <div class="createOptIcon"><img src="https://img.icons8.com/?size=512&id=105543&format=png" alt="">
+                </div>
+                <div class="createOptText">Опубликуйте тендер</div>
+
+            </div>
+        </div>
+        <div class="finder">
+            <div class="findField">
+                <div class="field">
+                    <input type="text" placeholder="По названию работ , сфере деятельности" #mainSearcher>
+                </div>
+                <div class="fieldBtn"><img src="https://img.icons8.com/?size=512&id=7695&format=png" alt=""></div>
+            </div>
+        </div>
+        <div class="tenderTypes">
+            <div class="allResult tenderTypesEl"
+                [ngClass]="{'tenderTypesAddStyle':tenderTypesFlags.allResulrFlag==true}">
+                <div class="resultText" (click)="tenderTypesChangeFlag(1)">
+                    Все результаты
+                </div>
+                <hr *ngIf="tenderTypesFlags.allResulrFlag==true">
+
+            </div>
+            <div class="constructionMaterials tenderTypesEl"
+                [ngClass]="{'tenderTypesAddStyle':tenderTypesFlags.constructionMaterialsFlag==true}">
+                <div class="resultText" (click)="tenderTypesChangeFlag(2)">
+                    строительные материалы
+                </div>
+                <hr *ngIf="tenderTypesFlags.constructionMaterialsFlag==true">
+
+            </div>
+            <div class="equipment tenderTypesEl" [ngClass]="{'tenderTypesAddStyle':tenderTypesFlags.equipmentFlag}">
+                <div class="resultText" (click)="tenderTypesChangeFlag(3)">
+                    оборудование
+                </div>
+                <hr *ngIf="tenderTypesFlags.equipmentFlag==true">
+
+            </div>
+            <div class="tools tenderTypesEl" [ngClass]="{'tenderTypesAddStyle':tenderTypesFlags.toolsFlag}">
+                <div class="resultText" (click)="tenderTypesChangeFlag(4)">
+                    инструменты
+                </div>
+                <hr *ngIf="tenderTypesFlags.toolsFlag==true">
+
+            </div>
+        </div>
+
+    </div>
+    <div class="mainContent">
+        <app-create-content-cat ></app-create-content-cat>
+    </div>
+</div>

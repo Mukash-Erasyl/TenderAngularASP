@@ -1,0 +1,110 @@
+<div class="con" (click)="closeBackWindow()">
+    <div class="head">
+        <div class="menuContent">
+            <div class="menuBtn " [ngClass]="{'active' : menuClickFlag}" (click)="menuClickEvent()" >
+                <div class="conEl">
+                    <div class="menuIcon iconTextEl"><img src="https://img.icons8.com/?size=512&id=36389&format=png"
+                            alt="" *ngIf="menuItemFlag"><img src="https://img.icons8.com/?size=512&id=9433&format=png"
+                            alt="" *ngIf="!menuItemFlag"></div>
+                    <div class="menuText">Меню</div>
+                </div>
+
+            </div>
+            <div class="createTender conEl" [ngClass]="{'active' : createClickFlag}" (click)="createClickEvent()" routerLink="/createTender">
+                <div class="menuIcon iconTextEl"><img src="https://img.icons8.com/?size=512&id=3220&format=png" alt="">
+                </div>
+                <div class="menuText">Создать тендер</div>
+
+
+            </div>
+            <div class="findTender conEl" [ngClass]="{'active' : findClickFlag} " (click)="findClickEvent()" routerLink="/findTender">
+                <div class="menuIcon iconTextEl"><img src="https://img.icons8.com/?size=512&id=14079&format=png" alt="">
+                </div>
+                <div class="menuText">Найти тендер</div>
+
+
+            </div>
+            <div class="purch" (click)="purchClickEvent()" >
+                <div class="conEl" [ngClass]="{'active' : purchClickFlag} ">
+                    <div class="menuIcon iconTextEl"><img src="https://img.icons8.com/?size=512&id=7739&format=png"
+                            alt=""></div>
+                    <div class="menuText">Закупки материалов</div>
+                </div>
+
+                <div class="serviceWindow" *ngIf="purchClickFlag">
+                    <div class="createPurch serviceEl conEl">
+
+                        <div class="menuText">Создать тендеры на закупку</div>
+                        <div class="menuIcon iconTextEl"><img src="https://img.icons8.com/?size=512&id=3220&format=png"
+                                alt=""></div>
+
+                    </div>
+                    <hr>
+                    <div class="findPurch serviceEl conEl">
+                        <div class="menuText">Найти тендеры на закупку</div>
+                        <div class="menuIcon iconTextEl"><img src="https://img.icons8.com/?size=512&id=14079&format=png"
+                                alt=""></div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="myTender conEl" [ngClass]="{'active' : myTenderClickFlag} " (click)="myTenderClickEvent()" routerLink="">
+                <div class="menuIcon iconTextEl"><img src="https://img.icons8.com/?size=512&id=95645&format=png" alt="">
+                </div>
+                <div class="menuText">Мои тендеры</div>
+
+            </div>
+            <div class="fav conEl" [ngClass]="{'active' : favClickFlag} " (click)="favClickEvent()" routerLink="">
+                <div class="menuIcon iconTextEl"><img src="https://img.icons8.com/?size=512&id=104&format=png" alt="">
+                </div>
+                <div class="menuText">Избранные</div>
+
+            </div>
+            <div class="log conEl" [ngClass]="{'active' : logClickFlag} " (click)="logClickEvent()" routerLink="">
+                <div class="menuIcon iconTextEl"><img src="https://img.icons8.com/?size=512&id=86305&format=png" alt="">
+                </div>
+                <div class="menuText">Вход/Выход</div>
+
+
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    
+        <div class="modal-wrapper" *ngIf="!menuItemFlag">
+            <div class="mentItemClick">
+                <div class="menuItemCol1">
+                    <div class="menuItemColEl">Строительные материалы</div>
+                    <div class="menuItemColEl">Машины и механизмы</div>
+                    <div class="menuItemColEl">Перевозка грузов</div>
+                    <div class="menuItemColEl">Сметные тарифные старки</div>
+                </div>
+                <div class="menuItemCol2">
+                    <div class="menuItemColEl">Сборники</div>
+                    <div class="menuItemColEl">Реестр всех компаний</div>
+                    <div class="menuItemColEl">Smart Tender</div>
+                    <div class="menuItemColEl">Тендеры онлайн</div>
+                </div>
+                <div class="menuItemCol3">
+                    <div class="menuItemColEl">Прайс-листы</div>
+                    <div class="menuItemColEl">Для поставщиков</div>
+                    <div class="menuItemColEl">Для закупщиков</div>
+                    <div class="menuItemColEl">O час</div>
+                    <div class="menuItemColEl">Контакты</div>
+                </div>
+            </div>
+
+           
+      </div>
+      
+
+    
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+
+</div>

@@ -1,0 +1,82 @@
+
+
+<div class="content">
+    <div class="counter">
+        <span class="counterText">Найдено:</span><span class="counterNum">{{createContentCounter}}</span>
+
+    </div>
+    <div class="allContent">
+        <div class="materials contentEl" *ngIf="tenderCreateBaseMat.length!=0">
+            <h1>Материалы</h1>
+            <div class="contentPosts" *ngFor="let a of tenderCreateBaseMat">
+                <div class="contentPost">
+                    <div class="idNumber">
+                        {{a.tenderCreateNumber}}
+                    </div>
+                    <div class="contentPostUnit">
+                        Единица измерения :
+                        {{a.tenderCreateUnit}}
+                    </div>
+                    <div class="contentPostName">
+                        {{a.nameTenderCreations}}
+                    </div>
+                    <div class="contentPostDesk">
+                        {{a.tenderDeskCreations}}
+                    </div>
+
+                    <div class="addBtn">Добавить</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="equipment contentEl" *ngIf="tenderCreateBaseEq.length!=0">
+            <h1>Оборудование</h1>
+            <div class="contentPosts" *ngFor="let a of tenderCreateBaseEq">
+                <div class="contentPost">
+                    <div class="idNumber">
+                        {{a.tenderCreateNumber}}
+                    </div>
+                    <div class="contentPostUnit">
+                        Единица измерения :
+                        {{a.tenderCreateUnit}}
+                    </div>
+                    <div class="contentPostName">
+                        {{a.nameTenderCreations}}
+                    </div>
+                    <div class="contentPostDesk">
+                        {{a.tenderDeskCreations}}
+                    </div>
+
+                    <div class="addBtn">Добавить</div>
+                </div>
+
+        </div>
+
+    </div>
+    <div class="tools contentEl" *ngIf="tenderCreateBaseTo.length!=0">
+        <h1>Инструменты</h1>
+        <div class="contentPosts" *ngFor="let a of tenderCreateBaseTo">
+            <div class="contentPost">
+                <div class="idNumber">
+                    {{a.tenderCreateNumber}}
+                </div>
+                <div class="contentPostUnit">
+                    Единица измерения :
+                    {{a.tenderCreateUnit}}
+                </div>
+                <div class="contentPostName">
+                    {{a.nameTenderCreations}}
+                </div>
+                <div class="contentPostDesk">
+                    {{a.tenderDeskCreations}}
+                </div>
+
+                <div class="addBtn">Добавить</div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+

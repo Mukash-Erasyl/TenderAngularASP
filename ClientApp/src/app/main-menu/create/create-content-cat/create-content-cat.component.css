@@ -1,0 +1,62 @@
+.counter {
+    margin-top: -25px;
+}
+
+.allContent {
+    margin-top: 50px;
+}
+
+.counterText {
+    opacity: .4;
+}
+
+.counterNum {
+    margin-left: 2px;
+    font-weight: 600;
+}
+
+.contentEl h1 {
+    font-weight: 800;
+    font-size: 32px;
+}
+
+.contentPost {
+    background-color: #F5F5F5;
+    padding: 25px;
+    border-radius: 10px 10px 10px 10px ;
+    margin-top: 25px;
+}
+
+.idNumber {
+    margin-top: -12px;
+    margin-bottom: 10px;
+}
+
+.contentPostUnit {
+    margin-bottom: 10px;
+    opacity: .5;
+}
+
+.contentPostName {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contentPostDesk {
+    opacity: .5;
+}
+
+.addBtn {
+    margin-top: 25px;
+    background-color:cornflowerblue;
+    max-width: 60px;
+    padding: 7px;
+    border-radius: 5px 5px 5px 5px ;
+    color: aliceblue;
+    transition: .3s;
+}
+
+.addBtn:active {
+    opacity: .5;
+
+}

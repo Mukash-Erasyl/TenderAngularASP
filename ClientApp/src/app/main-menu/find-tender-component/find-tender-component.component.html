@@ -1,0 +1,259 @@
+
+<div class="content">
+    <div class="head">
+        <div class="title">
+            <h1>Тендеры на строительство, ремонты и отделочные работы</h1>
+        </div>
+        <div class="underTitle">
+            <h3>
+                Помогаем найти надежных Исполнителей и добросовестных заказчиков
+            </h3>
+        </div>
+        <div class="finder">
+            <div class="findField">
+                <div class="field">
+                    <input type="text" placeholder="По названию работ , сфере деятельности" #mainSearcher >
+                </div>
+                <div class="fieldBtn" (click)="findByLetter(mainSearcher.value)"><img src="https://img.icons8.com/?size=512&id=7695&format=png" alt=""></div>
+            </div>
+            <div class="findClue">
+                Например: <a href="">Ремонт фасада</a>, <a href="">Настил кровли</a> , <a href="">Заливка стяжки</a>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="mainContent">
+        <div class="headText">
+            <h1>Найти тендер</h1>
+
+            <div class="appTenderContent">
+                <div class="tenderHeaderContent">
+                    <div class="choosTender">
+                        <div class="chooseTenderAll chooseTenderEl ">
+                            Все тендеры
+                            <hr>
+
+                        </div>
+                        <div class="chooseTenderForMe chooseTenderEl">
+                            Подобранные для Вас
+
+
+                        </div>
+                    </div>
+
+                    <div class="headerFilterField">
+                        <div class="headerMainPart">
+                            <div class="filterCity hfEl">
+                                <select name="city" id="">
+                                    <option value="Алматы">Алматы</option>
+                                    <option value="Астана">Астана</option>
+                                    <option value="Караганда">Караганда</option>
+                                </select>
+                            </div>
+                            <div class="filterFinder hfEl">
+                                <div class="field">
+                                    <input type="text" #addSearcher placeholder="По названию работ">
+                                </div>
+                                <div class="fieldFilterBtn" (click)="findByLetter(addSearcher.value)"><img
+                                        src="https://img.icons8.com/?size=512&id=7695&format=png" alt=""></div>
+                            </div>
+                        </div>
+
+                        <div class="filterFooter">
+                            <div class="filterFooterEl">
+                                Тендеры без предложения
+
+                            </div>
+                            <div class="filterFooterEl">
+                                Тендеры созданные юр. лицами
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="addSort">
+                    Сортировать <a href="">по дате публикации</a> по срочности
+                </div>
+                <!-- <div class="tenderMainContent">
+                    <div class="tenderPostContents">
+                        <div class="tenderPostContent" *ngFor="let a of tenderBaseByPage ">
+                            <div >
+                                <div class="startDate">
+                                    Опубликовано: {{a.dateStart}} часов назад
+                                </div>
+                                <div class="tenderTitle">
+                                    <div class="tenderTitleText" routerLink="/post">
+                                        <h3>{{a.title}}</h3>
+                                    </div>
+                                    <div class="elective" (click)="electiveClickEvent(a.id)">
+                                        <div class="tenderElect" *ngIf="a.elect">
+                                            <img src="https://img.icons8.com/?size=512&id=qdQpy48X3Rjv&format=png"
+                                                alt="">
+                                        </div>
+                                        <div class="tenderElect" *ngIf="!a.elect">
+                                            <img src="https://img.icons8.com/?size=512&id=104&format=png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tenderPostDesc">
+                                    {{a.decrib}}
+                                </div>
+                                <div class="tenderPostDateEnd">
+                                    Предложение доступно до : {{a.dateEnd}}
+                                </div>
+                                <div class="location">
+                                    Местополежение : {{a.city}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pageSwitcher">
+                        <div class="pageSwitchArrow switchEl" (click)="selectFun(pageCounter-1)"><img
+                                src="https://img.icons8.com/?size=512&id=357&format=png" alt=""></div>
+                        <div class="pageSwitch " *ngFor="let i of pageButtonsCount">
+                            <div class="pageSwitchBtn switchEl" [ngClass]="{'choosePageBtnBC':tenderBase[i-1].pageFlag==true}" (click)="selectPageEvent(i)">{{i}}</div>
+                        </div>
+                        <div class="pageSwitchArrow switchEl" ><img
+                                src="https://img.icons8.com/?size=512&id=355&format=png" alt="" (click)="selectFun(pageCounter+1)"></div>
+                    </div>
+
+                </div> -->
+
+                <div class="tenderMainContent">
+                    <div class="tenderPostContents">
+                        <div class="tenderPostContent" *ngFor="let a of tenderBaseByPagePost ">
+                            <div>
+                                <div class="startDate">
+                                    Опубликовано: {{a.tenderStartDate | date:"dd/MM/yyyy-h:mm a"}}
+                                </div>
+                                <div class="tenderTitle">
+                                    <div class="tenderTitleText" routerLink="/post" (click)="getTenderPost(a.tenderId || 0)">
+                                        <h3>{{a.tenderName}}</h3>
+                                    </div>
+                                    <div class="elective" (click)="electiveClickEventPost(a.tenderId || 0)">
+                                        <div class="tenderElect" *ngIf="a.elect">
+                                            <img src="https://img.icons8.com/?size=512&id=qdQpy48X3Rjv&format=png"
+                                                alt="">
+                                        </div>
+                                        <div class="tenderElect" *ngIf="!a.elect">
+                                            <img src="https://img.icons8.com/?size=512&id=104&format=png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tenderPostDesc">
+                                    {{a.tenderDesk}}
+                                </div>
+                                <div class="tenderPostDateEnd">
+                                    Предложение доступно до : {{a.tenderEndDate | date:"dd/MM/yyyy"}}
+                                </div>
+                                <div class="location">
+                                    Местополежение : {{a.location}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="pageSwitcher">
+                        <div class="pageSwitchArrow switchEl" (click)="selectFunPost(pageCounterPost-1)"><img
+                                src="https://img.icons8.com/?size=512&id=357&format=png" alt=""></div>
+                        <div class="pageSwitch " *ngFor="let i of pageButtonsCountPost">
+                            <div class="pageSwitchBtn switchEl" [ngClass]="{'choosePageBtnBC':tenderBasePost[i-1].pageFlag==true}" (click)="selectPageEventPost(i)">{{i}}</div>
+                        </div>
+                        <div class="pageSwitchArrow switchEl" ><img
+                                src="https://img.icons8.com/?size=512&id=355&format=png" alt="" (click)="selectFunPost(pageCounterPost+1)"></div>
+                    </div>
+                
+                </div>
+                <div class="tenderContentCategories">
+                    <div class="allCategories categoryEl">
+                        <div class="categoryText">
+                            Все категории
+                        </div>
+                        <div class="categoryFlag">
+                            <input type="checkbox" value="" name="" id="">
+                        </div>
+
+
+                    </div>
+                    <div class="smallFix categoryEl" >
+                        <div class="categoryText">
+                            Мелкий ремонт
+                        </div>
+                        <div class="categoryFlag"  >
+                            <input type="checkbox" value="Мелкий ремонт" name=""    id="">
+                        </div>
+
+                    </div>
+                    <div class="electric categoryEl">
+                        <div class="categoryText">
+                            Электрика
+                        </div>
+                        <div class="categoryFlag">
+                            <input type="checkbox" value="Электрика" name="" id="">
+                        </div>
+
+                    </div>
+                    <div class="plumbing categoryEl">
+                        <div class="categoryText">
+                            Сантехника
+                        </div>
+                        <div class="categoryFlag">
+                            <input type="checkbox" value="Сантехника" name="" id="">
+                        </div>
+
+                    </div>
+                    <div class="finWork categoryEl">
+                        <div class="categoryText">
+                            Отделочные работы
+                        </div>
+                        <div class="categoryFlag">
+                            <input type="checkbox" value="Отделочные работы" name="" id="">
+                        </div>
+
+                    </div>
+                    <div class="floor categoryEl">
+                        <div class="categoryText">
+                            Полы
+                        </div>
+                        <div class="categoryFlag">
+                            <input type="checkbox" value="Полы" name="" id="">
+                        </div>
+
+                    </div>
+                    <div class="paintingWork categoryEl">
+                        <div class="categoryText">
+                            Молярные и штукатурные работы
+                        </div>
+                        <div class="categoryFlag">
+                            <input type="checkbox" value="Молярные и штукатурные работы" name="" id="">
+                        </div>
+
+                    </div>
+                    <div class="wallPaper categoryEl">
+                        <div class="categoryText">
+                            Поклеика боев
+                        </div>
+                        <div class="categoryFlag">
+                            <input type="checkbox" value="Поклеика боев" name="" id="">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</div>
+
+

@@ -1,0 +1,167 @@
+
+<div class="container">
+    <div class="postContent">
+        <div class="headInfo">
+            <div class="tenderId headEl">
+                Тендер № '{{tender.tenderNumber}}'
+            </div>
+            <div class="dateStart headEl">
+                Тендер выложили {{tender.tenderDate | date:"dd/MM/yyyy"}}
+            </div>
+            <div class="dateEnd headEl">
+                Тендер действителен до {{tender.tenderAccessDate | date:"dd/MM/yyyy"}}
+            </div>
+        </div>
+        <div class="postTitle">
+            <h1>{{tender.tenderName}}</h1>
+        </div>
+        <div class="picCon">
+            <img [src]="tender.tenderPictUrl" alt="">
+
+        </div>
+        <div class="desk">
+            <div class="deskTitle"><h2>Описание</h2></div>
+            <div class="deskText">{{tender.tenderDesk}}.</div>
+        </div>
+        <div class="geolockation">
+            <div class="deskTitle"><h2>Место оказания услуг</h2></div>
+            <div class="map">
+                <app-map></app-map>
+    
+        
+        </div>
+
+
+        </div>
+        <div class="objectType">
+            <div class="title"><h2>Объект</h2></div>
+            <!-- <div class="objectEl">
+                <div>Тип</div>
+                <div class="elel">Лоджия</div>
+            </div>
+            <div class="objectEl">
+                <div>Площадь</div>
+                <div class="elel">3.5м2</div>
+            </div>
+            <div class="objectEl">
+                <div>Стены:</div>
+                <div class="elel">Кирпич</div>
+            </div>
+            <div class="objectEl">
+                <div>Этаж: </div>
+                <div class="elel">4</div>
+            </div>
+            <div class="objectEl">
+                <div>Есть лифт?:</div>
+                <div class="elel">Да</div>
+            </div> -->
+            <table class="objectTable">
+                <tbody>
+                  <tr>
+                    <td>Тип</td>
+                    <td class="tdSecEl">Лоджия</td>
+                  </tr>
+                  <tr>
+                    <td>Площадь</td>
+                    <td class="tdSecEl">3.5м2</td>
+                  </tr>
+                  <tr>
+                    <td>Стены:</td>
+                    <td class="tdSecEl">Кирпич</td>
+                  </tr>
+                  <tr>
+                    <td>Этаж:</td>
+                    <td class="tdSecEl">4</td>
+                  </tr>
+                  <tr>
+                    <td>Есть лифт?:</td>
+                    <td class="tdSecEl">Да</td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+        </div>
+        <div class="term">
+            <div class="termTitle"><h2>Срок поставки</h2></div>
+            <div class="termDates">
+                <div class="termDateStart termDateEl">
+                    <div class="termDateTitle">Начать</div>
+                    <div class="termDateContent">{{tender.tenderStartDate | date:"dd/MM/yyyy"}}</div>
+                </div>
+                <div class="arrow termDateEl"><img src="https://img.icons8.com/?size=512&id=61&format=png" alt=""></div>
+                <div class="termDateEnd termDateEl">
+                    <div class="termDateTitle">Закончить</div>
+                    <div class="termDateContent">{{tender.tenderEndDate | date:"dd/MM/yyyy"}}</div>
+                </div>
+            </div>
+            <div class="termDays">{{diffDateDays}} календарных дней</div>
+
+        </div>
+        <div class="stockBlock">
+            Ваше предложение будет 3 по счету если Вы откликнитесь прямо сейчас
+
+        </div>
+        <div class="downloadSpecific">
+            <div class="dow">
+            <div class="downloadSpecificIcon"><img src="https://img.icons8.com/?size=512&id=42861&format=png" alt=""></div>
+            <div class="downloadSpecificText">Cкачать спецификацию</div>
+        </div>
+
+        </div>
+        <div class="offer">
+            <div class="off">
+            Подать предложение
+        </div>
+
+        </div>
+    </div>
+    <div class="otherTenders">
+        <div class="title">
+            <div class="titleText titleEl"><h1>Похожие тендеры</h1></div>
+            <div class="titleBut titleEl">
+                <div class="but"><img src="https://img.icons8.com/?size=512&id=1806&format=png" alt=""></div>
+                <div class="but"><img src="https://img.icons8.com/?size=512&id=61&format=png" alt=""></div>
+            </div>
+        </div>
+        <div class="tenderPosts">
+            <div class="tenderMainContent">
+                <div class="tenderPostContents">
+                    <div *ngFor="let a of tenderBasePost ">
+                        <div class="tenderPostContent" routerLink="/post" *ngIf="a.tenderId!=tender.tenderId " (click)="getTenderPost(a.tenderId || 0)">
+                            <div class="startDate">
+                                Опубликовано: {{a.tenderEndDate | date:"dd/MM/yyyy"}} 
+                            </div>
+                            <div class="tenderTitle">
+                                <div class="tenderTitleText">
+                                    <h3>{{a.tenderName}}</h3>
+                                </div>
+                                <div class="elective" >
+                                    <div class="tenderElect" *ngIf="a.elect">
+                                        <img src="https://img.icons8.com/?size=512&id=qdQpy48X3Rjv&format=png"
+                                            alt="">
+                                    </div>
+                                    <div class="tenderElect" *ngIf="!a.elect">
+                                        <img src="https://img.icons8.com/?size=512&id=104&format=png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tenderPostDesc">
+                                {{a.tenderDesk}}
+                            </div>
+                            <div class="tenderPostDateEnd">
+                                Предложение доступно до : {{a.tenderAccessDate | date:"dd/MM/yyyy" }}
+                            </div>
+                            <div class="location">
+                                Местополежение : {{a.location}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+ </div>

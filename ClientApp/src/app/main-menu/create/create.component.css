@@ -1,0 +1,124 @@
+.container {
+    margin-bottom: 350px;
+
+}
+.createContainer {
+    
+    background-color: #F5F5F5;
+    margin: 0;
+    max-width: 100%;
+    padding: 50px;
+    padding-bottom: 0;
+}
+
+
+.findField {
+    margin-left: 25%;
+    display: flex;
+}
+
+.findField input {
+    font-size: 17px;
+    padding: 5px 15px;
+    width:500px;
+    height: 25px;
+}
+
+.fieldBtn {
+    height: 40px;
+    width: 45px;
+    border-radius: 3px 3px 3px 3px  ;
+    background-color:cornflowerblue;
+}
+
+
+.fieldBtn  img {
+    width: 20px;
+    padding: 25%;
+    transition: .7s;
+}
+
+
+.fieldBtn:active {
+    background-color: aliceblue;
+
+}
+
+
+.findClue {
+    font-size: 17px;
+    margin-top: 20px;
+    max-width: 450px;
+    margin-left: 25%;
+}
+
+.findClue a {
+
+    text-decoration: none;
+    color:cadetblue;
+}
+
+
+.tenderTypesEl {
+    text-transform: uppercase;
+}
+
+.head {
+    font-size: 17px;
+    max-width: 1100px;
+    margin-left: 12%;
+}
+
+.createOptions {
+    margin:50px 12%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.opt {
+    display: flex;
+    
+}
+.createOptIcon {
+    margin-right: 7px;
+    margin-top: -3px;
+    background-color: white;
+    padding: 5px 7px;
+    padding-top: 6px;
+    border-radius: 5px 5px 5px 5px ;
+}
+.createOptIcon img {
+    max-width: 12px;
+    
+}
+
+
+.tenderTypes {
+    margin:50px 12%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+    
+    
+}
+
+.resultText {
+    padding-bottom:20px ;
+
+}
+
+.tenderTypesAddStyle {
+    color: #1E90FF;
+    font-weight: 600;
+    
+}
+.tenderTypesAddStyle hr{
+    border: 1px solid #1E90FF;
+
+}
+
+.mainContent {
+    margin-left: 210px;
+}
+
